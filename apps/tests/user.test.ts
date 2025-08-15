@@ -12,13 +12,13 @@ describe("Signup endpoints", () => {
                 email: USER_NAME,
                 password: "password"
             })
-            expect(false, "Control shouldnt reach here")
+            expect(false, "Control shouldn't reach here")
         } catch(e) {
 
         }
     })
 
-    it("Is able to sign up if body is incorrect", async () => {
+    it("Is able to sign up if body is correct", async () => {
         try {
             const res = await axios.post(`${BACKEND_URL}/user/signup`, {
                 username: USER_NAME,
@@ -40,13 +40,13 @@ describe("Signin endpoints", () => {
                 email: USER_NAME,
                 password: "password"
             })
-            expect(false, "Control shouldnt reach here")
+            expect(false, "Control shouldn't reach here")
         } catch(e) {
             console.log(e);
         }
     })
 
-    it("Is able to sign in if body is incorrect", async () => {
+    it("Is able to sign in if body is correct", async () => {
         try {
             const res = await axios.post(`${BACKEND_URL}/user/signin`, {
                 username: USER_NAME,
